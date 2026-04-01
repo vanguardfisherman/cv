@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="theme-color" content="#0d0d2b"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <title>Eduardo De Avila | Full Stack Developer</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+<!-- Starfield Canvas -->
+<canvas id="stars-canvas"></canvas>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">&lt;<span>EDU</span>.DEV/&gt;</div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#hero">INICIO</a></li>
+    <li><a href="#about">SOBRE MÍ</a></li>
+    <li><a href="#skills">SKILLS</a></li>
+    <li><a href="#experience">EXPERIENCIA</a></li>
+    <li><a href="#portfolio">PORTFOLIO</a></li>
+    <li><a href="#contact">CONTACTO</a></li>
+  </ul>
+  <!-- Botón hamburguesa (solo mobile) -->
+  <button class="hamburger" id="hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Menú mobile desplegable -->
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#hero"       class="mobile-link">INICIO</a>
+  <a href="#about"      class="mobile-link">SOBRE MÍ</a>
+  <a href="#skills"     class="mobile-link">SKILLS</a>
+  <a href="#experience" class="mobile-link">EXPERIENCIA</a>
+  <a href="#portfolio"  class="mobile-link">PORTFOLIO</a>
+  <a href="#contact"    class="mobile-link">CONTACTO</a>
+</div>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+
+    <!-- Three.js canvas para modelos 3D flotantes -->
+    <canvas id="three-canvas"></canvas>
+    <div class="model-label" id="label-bikes"></div>
+    <div class="model-label" id="label-ferrari">[ FERRARI.GLB ]</div>
+
+    <!-- Pixel art character — Eduardo -->
+    <img class="pixel-char" src="assets/images/pixelCharacter.png" alt="Eduardo pixel art character"/>
+
+    <h1 class="hero-name">EDUARDO DE AVILA</h1>
+    <p class="hero-title">✦ FULL STACK DEVELOPER · DATA ANALYST · GAME DEV ✦</p>
+
+    <div style="overflow:hidden; max-width: 500px; margin: 0 auto 20px;">
+      <p class="typewriter">print("Hello, World! Ready to code ⚡")</p>
+    </div>
+
+    <div class="loading-bar-container">
+      <div class="loading-bar-fill"></div>
+      <span class="loading-bar-text">LOADING SKILLS... 100%</span>
+    </div>
+
+    <div class="hero-buttons" style="margin-top: 28px;">
+      <a href="#portfolio" class="btn-pixel btn-hire">▶ VER PORTFOLIO</a>
+      <a href="#contact" class="btn-pixel btn-contact">✉ HIRE ME!</a>
+      <a href="assets/Eduardo_De_Avila_CV_2026.pdf" download class="btn-pixel btn-cv">⬇ DESCARGAR CV</a>
+    </div>
+
+    <!-- Tech badges — scroll marquee infinito -->
+    <div class="badges-wrapper">
+      <div class="badges-track">
+
+        <!-- Fila 1: Web & Front-end -->
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+          <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+          <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+          <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular"/>
+          <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind"/>
+          <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js"/>
+          <!-- duplicado para loop continuo -->
+          <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
+          <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
+          <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+          <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+          <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+          <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular"/>
+          <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind"/>
+          <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js"/>
+        </div>
+
+        <!-- Fila 2: Back-end & Python (dirección inversa) -->
+        <div class="badge-row badge-row-reverse">
+          <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+          <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django"/>
+          <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
+          <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
+          <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+          <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
+          <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot"/>
+          <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
+          <!-- duplicado -->
+          <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+          <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django"/>
+          <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
+          <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
+          <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+          <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
+          <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot"/>
+          <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"/>
+        </div>
+
+        <!-- Fila 3: Game Dev, Datos & Diseño -->
+        <div class="badge-row">
+          <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#"/>
+          <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" alt="Unity"/>
+          <img src="https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white" alt="Godot"/>
+          <img src="https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white" alt="Blender"/>
+          <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas"/>
+          <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL"/>
+          <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"/>
+          <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+          <!-- duplicado -->
+          <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#"/>
+          <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" alt="Unity"/>
+          <img src="https://img.shields.io/badge/Godot-478CBF?style=for-the-badge&logo=godot-engine&logoColor=white" alt="Godot"/>
+          <img src="https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white" alt="Blender"/>
+          <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas"/>
+          <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL"/>
+          <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma"/>
+          <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about">
+    <h2 class="section-title reveal">SOBRE MÍ</h2>
+
+    <div class="about-grid">
+      <div class="pixel-panel about-card reveal">
+        <h3>// PERFIL.exe</h3>
+        <p>
+          Estudiante de décimo semestre de Ingeniería de Sistemas y Desarrollador Full Stack con sólida base técnica y perfil versátil. Combino habilidades en desarrollo web, análisis de datos, diseño gráfico y desarrollo de videojuegos. Orientado a resultados con comunicación clara y visión creativa.
+        </p>
+      </div>
+
+      <div class="pixel-panel about-card reveal">
+        <h3>// INFO.json</h3>
+        <div class="info-row">
+          <span class="info-label">📍 CIUDAD:</span>
+          <span class="info-value">Sucre, Colombia</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">📚 CARRERA:</span>
+          <span class="info-value">Ing. de Sistemas — CECAR</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">📧 EMAIL:</span>
+          <span class="info-value">deavilaflorez71@gmail.com</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">📱 TEL:</span>
+          <span class="info-value">+57 314 747 6884</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">🌐 IDIOMAS:</span>
+          <span class="info-value">Español (Nativo) · Inglés (A2)</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">⚡ STATUS:</span>
+          <span class="info-value" style="color:var(--pixel-green);">▶ DISPONIBLE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills">
+    <h2 class="section-title reveal">SKILLS &amp; TECNOLOGÍAS</h2>
+
+    <div class="skills-grid">
+
+      <div class="pixel-panel skill-category reveal">
+        <h3>⚔️ FRONT-END</h3>
+        <div class="skill-item">
+          <div class="skill-name"><span>React</span><span>90%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-blue" data-width="90"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Angular</span><span>80%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-red" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>HTML5 / CSS3</span><span>95%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-orange" data-width="95"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Tailwind CSS</span><span>85%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-blue" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>JavaScript</span><span>88%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-yellow" data-width="88"></div></div>
+        </div>
+      </div>
+
+      <div class="pixel-panel skill-category reveal">
+        <h3>🛡️ BACK-END</h3>
+        <div class="skill-item">
+          <div class="skill-name"><span>Spring Boot</span><span>82%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-green" data-width="82"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Node.js / Express</span><span>80%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-green" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Django / FastAPI</span><span>75%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-green" data-width="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Java</span><span>85%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-orange" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Python</span><span>90%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-blue" data-width="90"></div></div>
+        </div>
+      </div>
+
+      <div class="pixel-panel skill-category reveal">
+        <h3>🗄️ DATOS &amp; DB</h3>
+        <div class="skill-item">
+          <div class="skill-name"><span>SQL</span><span>80%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-blue" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>pandas</span><span>88%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-purple" data-width="88"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Excel / VBA</span><span>85%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-green" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>SPSS</span><span>78%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-yellow" data-width="78"></div></div>
+        </div>
+      </div>
+
+      <div class="pixel-panel skill-category reveal">
+        <h3>🎮 OTROS</h3>
+        <div class="skill-item">
+          <div class="skill-name"><span>Unity / C#</span><span>80%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-purple" data-width="80"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Godot</span><span>75%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-blue" data-width="75"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Photoshop / Figma</span><span>82%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-orange" data-width="82"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Git / GitHub</span><span>85%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-red" data-width="85"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-name"><span>Blockchain</span><span>70%</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-yellow" data-width="70"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience">
+    <h2 class="section-title reveal">EXPERIENCIA</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="pixel-panel timeline-card">
+          <div class="timeline-date">► ENE 2023 – DIC 2024</div>
+          <div class="timeline-role">ANALISTA DE DATOS</div>
+          <div class="timeline-company">// Freelancer</div>
+          <p class="timeline-desc">Análisis y visualización de datos con Python y Excel avanzado. Limpieza y transformación de datos para decisiones académicas y de negocio. Apoyo en tesis con enfoque estadístico.</p>
+          <div class="tag-list">
+            <span class="tag">Python (pandas)</span>
+            <span class="tag">Excel Avanzado</span>
+            <span class="tag">SPSS</span>
+            <span class="tag">Visualización de Datos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="pixel-panel timeline-card">
+          <div class="timeline-date">► ENE 2020 – DIC 2024</div>
+          <div class="timeline-role">DESARROLLADOR / DISEÑADOR</div>
+          <div class="timeline-company">// Proyecto Blockchain Ape Box</div>
+          <p class="timeline-desc">Desarrollo de componentes de software y recursos visuales. Integración de servicios y soporte al equipo en proyecto blockchain internacional.</p>
+          <div class="tag-list">
+            <span class="tag">Blockchain</span>
+            <span class="tag">Diseño Gráfico</span>
+            <span class="tag">Desarrollo Web</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="pixel-panel timeline-card">
+          <div class="timeline-date">► ENE 2022 – DIC 2023</div>
+          <div class="timeline-role">TÉCNICO DE SOPORTE</div>
+          <div class="timeline-company">// Prink Color</div>
+          <p class="timeline-desc">Mantenimiento preventivo y correctivo de equipos. Diagnóstico de fallos hardware/software, instalación de drivers y periféricos. Atención al cliente y documentación de incidencias.</p>
+          <div class="tag-list">
+            <span class="tag">Windows</span>
+            <span class="tag">Hardware</span>
+            <span class="tag">Diagnóstico</span>
+            <span class="tag">Soporte Técnico</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="pixel-panel timeline-card">
+          <div class="timeline-date">► ENE 2020 – ACTUALIDAD</div>
+          <div class="timeline-role">ESTUDIANTE — ING. DE SISTEMAS</div>
+          <div class="timeline-company">// Corporación Universitaria CECAR</div>
+          <p class="timeline-desc">Décimo semestre. Énfasis en desarrollo full stack, análisis de datos, diseño gráfico y desarrollo de videojuegos.</p>
+          <div class="tag-list">
+            <span class="tag">Full Stack</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag">Game Dev</span>
+            <span class="tag">Diseño Gráfico</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PORTFOLIO ===== -->
+  <section id="portfolio">
+    <h2 class="section-title reveal">PORTFOLIO</h2>
+
+
+    <div class="projects-grid">
+
+      <div class="pixel-panel project-card reveal">
+        <div class="project-header">
+          <div class="project-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="project-title-bar">rush_hour.exe</div>
+          <span class="project-badge" style="background:#39FF14;color:#000">EN PRODUCCIÓN</span>
+        </div>
+        <div class="project-body">
+          <div class="project-name">🎮 RUSH HOUR SOLVER</div>
+          <p class="project-desc">Puzzle inspirado en Rush Hour con solver algorítmico, generador de niveles procedural y modo versus. 109 commits, desplegado en Vercel.</p>
+          <div class="project-tech">
+            <span class="tech-tag">TypeScript</span><span class="tech-tag">Next.js</span><span class="tech-tag">Algoritmos</span><span class="tech-tag">Vercel</span>
+          </div>
+          <a href="https://github.com/vanguardfisherman/rush_hour" target="_blank" class="btn-github">&#60;/&#62; VER CÓDIGO</a>
+        </div>
+      </div>
+
+      <div class="pixel-panel project-card reveal">
+        <div class="project-header">
+          <div class="project-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="project-title-bar">progrest_sales.exe</div>
+          <span class="project-badge" style="background:#00e5ff;color:#000">FULL STACK</span>
+        </div>
+        <div class="project-body">
+          <div class="project-name">🎟️ PROGREST SALES — RIFAS</div>
+          <p class="project-desc">Plataforma full stack de venta de rifas en línea con roles admin/vendedor, autenticación por sesiones, Prisma ORM y reglas de negocio complejas.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Next.js</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Prisma</span><span class="tech-tag">PostgreSQL</span>
+          </div>
+          <a href="https://github.com/vanguardfisherman/progrest-sales" target="_blank" class="btn-github">&#60;/&#62; VER CÓDIGO</a>
+        </div>
+      </div>
+
+      <div class="pixel-panel project-card reveal">
+        <div class="project-header">
+          <div class="project-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="project-title-bar">system_solar.exe</div>
+          <span class="project-badge" style="background:#c060ff;color:#000">3D INTERACTIVO</span>
+        </div>
+        <div class="project-body">
+          <div class="project-name">🌌 SYSTEM SOLAR 3D</div>
+          <p class="project-desc">Simulación interactiva del sistema solar en voxel art con órbitas animadas, efecto Bloom, tour cinemático automático y música ambiental. Backend en Spring Boot.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Three.js</span><span class="tech-tag">TypeScript</span><span class="tech-tag">Spring Boot</span><span class="tech-tag">Voxel Art</span>
+          </div>
+          <a href="https://github.com/vanguardfisherman/systemsolar" target="_blank" class="btn-github">&#60;/&#62; VER CÓDIGO</a>
+        </div>
+      </div>
+
+      <div class="pixel-panel project-card reveal">
+        <div class="project-header">
+          <div class="project-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="project-title-bar">rest3d.exe</div>
+          <span class="project-badge" style="background:#c060ff;color:#000">3D + ADMIN</span>
+        </div>
+        <div class="project-body">
+          <div class="project-name">🍽️ RESTAURANTE 3D</div>
+          <p class="project-desc">Menú interactivo en 3D para restaurante con modelos GLB propios, filtro por categorías, panel de administración y CRUD completo. React + Three.js.</p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span><span class="tech-tag">Three.js</span><span class="tech-tag">GLB/GLTF</span><span class="tech-tag">MagicaVoxel</span>
+          </div>
+          <a href="https://github.com/vanguardfisherman/rest3D" target="_blank" class="btn-github">&#60;/&#62; VER CÓDIGO</a>
+        </div>
+      </div>
+
+      <div class="pixel-panel project-card reveal">
+        <div class="project-header">
+          <div class="project-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="project-title-bar">agora.exe</div>
+          <span class="project-badge" style="background:#FF8C00;color:#000">IA APLICADA</span>
+        </div>
+        <div class="project-body">
+          <div class="project-name">🤖 ÁGORA — IA POLÍTICA</div>
+          <p class="project-desc">Plataforma que recolecta noticias colombianas y las clasifica automáticamente por orientación política usando Google Gemini, scraping, node-cron y Docker.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span><span class="tech-tag">Node.js</span><span class="tech-tag">Gemini AI</span><span class="tech-tag">Docker</span><span class="tech-tag">PostgreSQL</span>
+          </div>
+          <a href="https://github.com/vanguardfisherman/Agora" target="_blank" class="btn-github">&#60;/&#62; VER CÓDIGO</a>
+        </div>
+      </div>
+
+      <div class="pixel-panel project-card reveal">
+        <div class="project-header">
+          <div class="project-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="project-title-bar">analizer.exe</div>
+          <span class="project-badge" style="background:#FF8C00;color:#000">MACHINE LEARNING</span>
+        </div>
+        <div class="project-body">
+          <div class="project-name">🔬 ANALIZER — VISIÓN IA</div>
+          <p class="project-desc">Herramienta de análisis y clasificación de imágenes mediante visión por computadora con modelo entrenado en Python. Desplegado en web.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span><span class="tech-tag">ML</span><span class="tech-tag">Computer Vision</span><span class="tech-tag">Streamlit</span>
+          </div>
+          <a href="https://github.com/vanguardfisherman/analizer" target="_blank" class="btn-github">&#60;/&#62; VER CÓDIGO</a>
+        </div>
+      </div>
+
+      <div class="pixel-panel project-card reveal">
+        <div class="project-header">
+          <div class="project-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="project-title-bar">checkin.exe</div>
+          <span class="project-badge" style="background:#FFD700;color:#000">MOBILE</span>
+        </div>
+        <div class="project-body">
+          <div class="project-name">📱 CHECKIN — APP MÓVIL</div>
+          <p class="project-desc">Aplicación React Native para Android de gestión de rifas con base de datos SQLite local, backup en JSON y sincronización entre dispositivos.</p>
+          <div class="project-tech">
+            <span class="tech-tag">React Native</span><span class="tech-tag">Android</span><span class="tech-tag">SQLite</span><span class="tech-tag">TypeScript</span>
+          </div>
+          <a href="https://github.com/vanguardfisherman/checkin" target="_blank" class="btn-github">&#60;/&#62; VER CÓDIGO</a>
+        </div>
+      </div>
+
+      <div class="pixel-panel project-card reveal">
+        <div class="project-header">
+          <div class="project-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="project-title-bar">voxel_viz.exe</div>
+          <span class="project-badge" style="background:#c060ff;color:#000">3D TOOLS</span>
+        </div>
+        <div class="project-body">
+          <div class="project-name">🧊 VOXEL 3D VISUALIZER</div>
+          <p class="project-desc">Visualizador de modelos 3D en Python con Streamlit y Plotly. Carga modelos MagicaVoxel respetando texturas y colores, con catálogo interactivo.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span><span class="tech-tag">Streamlit</span><span class="tech-tag">Plotly</span><span class="tech-tag">Trimesh</span><span class="tech-tag">MagicaVoxel</span>
+          </div>
+          <a href="https://github.com/vanguardfisherman/virtual-3d-object-visualizer" target="_blank" class="btn-github">&#60;/&#62; VER CÓDIGO</a>
+        </div>
+      </div>
+
+      <div class="pixel-panel project-card reveal">
+        <div class="project-header">
+          <div class="project-dots">
+            <div class="dot dot-red"></div>
+            <div class="dot dot-yellow"></div>
+            <div class="dot dot-green"></div>
+          </div>
+          <div class="project-title-bar">godot_game.exe</div>
+          <span class="project-badge" style="background:#ff3c3c;color:#fff">GAME DEV</span>
+        </div>
+        <div class="project-body">
+          <div class="project-name">👾 PRIMER VIDEOJUEGO — GODOT</div>
+          <p class="project-desc">Primer videojuego completo desarrollado en Godot Engine con GDScript. Diseño de mecánicas, niveles y assets visuales propios.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Godot</span><span class="tech-tag">GDScript</span><span class="tech-tag">Game Design</span><span class="tech-tag">Pixel Art</span>
+          </div>
+          <a href="https://github.com/vanguardfisherman/tutorial-game" target="_blank" class="btn-github">&#60;/&#62; VER CÓDIGO</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <h2 class="section-title reveal">CONTACTO</h2>
+
+    <div class="contact-inner">
+      <div class="contact-grid reveal">
+        <div class="pixel-panel contact-card">
+          <span class="contact-icon">📧</span>
+          <div class="contact-label">EMAIL</div>
+          <div class="contact-value">
+            <a href="mailto:deavilaflorez71@gmail.com">deavilaflorez71@gmail.com</a>
+          </div>
+        </div>
+        <div class="pixel-panel contact-card">
+          <span class="contact-icon">📱</span>
+          <div class="contact-label">TELÉFONO</div>
+          <div class="contact-value">+57 314 747 6884</div>
+        </div>
+        <div class="pixel-panel contact-card">
+          <span class="contact-icon">📍</span>
+          <div class="contact-label">UBICACIÓN</div>
+          <div class="contact-value">Sucre, Colombia</div>
+        </div>
+        <div class="pixel-panel contact-card">
+          <span class="contact-icon">🎓</span>
+          <div class="contact-label">UNIVERSIDAD</div>
+          <div class="contact-value">CECAR · 10° Semestre</div>
+        </div>
+      </div>
+
+      <div class="hire-banner reveal">
+        <h2>✦ HIRE ME! ✦</h2>
+        <p>¿Tienes un proyecto en mente? ¡Construyamos algo increíble juntos! Disponible para proyectos freelance, prácticas y oportunidades laborales.</p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:8px;">
+          <a href="mailto:deavilaflorez71@gmail.com" class="btn-pixel btn-hire">▶ ENVIAR MENSAJE</a>
+          <a href="assets/Eduardo_De_Avila_CV_2026.pdf" download class="btn-pixel btn-cv">⬇ DESCARGAR CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &lt;/&gt; EDUARDO RAFAEL DE AVILA FLOREZ · FULL STACK DEVELOPER · 2026 · HECHO CON ♥ Y MUCHO CAFÉ ☕
+</footer>
+
+
+
+<!-- ===== THREE.JS — MODELOS 3D FLOTANTES ===== -->
+
+
+
+
+<!-- Three.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<!-- App scripts -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
